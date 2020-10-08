@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6600 64-bit) (preloaded format=xelatex 2018.10.6)  6 JAN 2019 21:14
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6600 64-bit) (preloaded format=xelatex 2018.10.6)  28 OCT 2019 20:18
 entering extended mode
 **c:/Users/adam/Documents/phd/CV/A_Symington_CV.tex
 (c:/Users/adam/Documents/phd/CV/A_Symington_CV.tex
@@ -896,33 +896,98 @@ LaTeX Info: Redefining \nameref on input line 77.
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
 
-(resume/education.tex
+(resume/experience.tex
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95015pt on input line 14.
+(Font)              scaled to size 10.95015pt on input line 12.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.67863pt on input line 14.
+(Font)              scaled to size 7.67863pt on input line 12.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.45398pt on input line 14.
+(Font)              scaled to size 5.45398pt on input line 12.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94983pt on input line 14.
+(Font)              scaled to size 10.94983pt on input line 12.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.6784pt on input line 14.
+(Font)              scaled to size 7.6784pt on input line 12.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.45381pt on input line 14.
+(Font)              scaled to size 5.45381pt on input line 12.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <9> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 14.
+t line 12.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <8> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 14.
-) (resume/experience.tex) (resume/skills.tex
-Overfull \hbox (20.6433pt too wide) in alignment at lines 3--6
-[] [] 
- []
+t line 12.
+) (resume/education.tex) (resume/teaching_experience.tex) (resume/publications.
+tex
 
-[1
+resume/publications.tex:2: LaTeX Error: Environment cvpubys undefined.
 
-]) (resume/honors.tex) (resume/committees.tex) (resume/extracurricular.tex
-[2
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+resume/publications.tex:3: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+resume/publications.tex:11: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+resume/publications.tex:19: LaTeX Error: \begin{document} ended by \end{cvpubys
+}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) (resume/honors.tex [1
+
+]) (resume/committees.tex) (resume/extracurricular.tex)
+
+c:/Users/adam/Documents/phd/CV/A_Symington_CV.tex:91: LaTeX Error: \begin{cente
+r} on input line 16 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
+ (A_Symington_CV.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 91.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 91.
+ )
+(\end occurred inside a group at level 6)
+
+### semi simple group (level 6) entered at line 16 (\begingroup)
+### semi simple group (level 5) entered at line 16 (\begingroup)
+### semi simple group (level 4) entered at line 2 (\begingroup)
+### semi simple group (level 3) entered at line 2 (\begingroup)
+### semi simple group (level 2) entered at line 2 (\begingroup)
+### semi simple group (level 1) entered at line 2 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 25406 strings out of 427834
+ 459073 string characters out of 3148681
+ 669015 words of memory out of 3000000
+ 29165 multiletter control sequences out of 15000+200000
+ 532698 words of font info for 79 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 47i,11n,72p,10466b,564s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on A_Symington_CV.pdf (2 pages).
