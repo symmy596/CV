@@ -10,7 +10,7 @@
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (cv.tex, resume.tex).
-% 2) It has been written in such a way that under most circumstances you 
+% 2) It has been written in such a way that under most circumstances you
 % should not need to edit it.
 %
 % Class license:
@@ -108,7 +108,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
+\geometry{left=1.cm, top=1.25cm, right=1.cm, bottom=1.cm, footskip=.05cm}
 
 %% Header & Footer
 % Set offset to each header and offset
@@ -221,14 +221,14 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{18pt}{1em}\headerfontlight\color{graytext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{18pt}{1em}\headerfont\bfseries\color{text} #1}}
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text} #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 
 % For elements of entry
@@ -256,7 +256,9 @@
 \newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
-\newcommand*{\paragraphstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
+
+%\newcommand*{\paragraphstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\lettertitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
@@ -295,6 +297,10 @@
 % Defines writer's email (optional)
 % Usage: \email{<email adress>}
 \newcommand*{\email}[1]{\def\@email{#1}}
+
+% Defines writer's email (optional)
+% Usage: \email{<email adress>}
+\newcommand*{\emailb}[1]{\def\@emailb{#1}}
 
 % Defines writer's homepage (optional)
 % Usage: \homepage{<url>}
@@ -384,7 +390,8 @@
 % Use to execute conditional statements by checking empty string
 \newcommand*{\ifempty}[3]{\ifthenelse{\isempty{#1}}{#2}{#3}}
 
-
+\newcommand{\acvSectionTopSkip}{3mm}
+\newcommand{\acvSectionContentTopSkip}{2.5mm}
 %-------------------------------------------------------------------------------
 %                Commands for elements of CV structure
 %-------------------------------------------------------------------------------
@@ -398,8 +405,8 @@
       \@lastname
     }
     \\
-    \vspace{0.4mm}
-    \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\}}
+    %\vspace{0.4mm}
+    %\ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\}}
     \vspace{0.4mm}
     \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\}}
     \vspace{-0.5mm}
@@ -417,17 +424,27 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
-          \href{mailto:\@email}{\faEnvelope\ \@email}
+          \href{mailto:\@email}{\faUniversity\ \@email}
         }
+        \ifthenelse{\isundefined{\@emailb}}
+          {}
+          {
+            \ifbool{isstart}
+              {
+                \setbool{istart}{false}
+              }
+              {\@headersocialsep}
+            \href{mailto:\@emailb}{\faAtom\ \@emailb}
+          }
       \ifthenelse{\isundefined{\@homepage}}
         {}
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{http://\@homepage}{\faHome\ \@homepage}
@@ -437,7 +454,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{https://github.com/\@github}{\faGithubSquare\ \@github}
@@ -447,7 +464,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\ \@stackoverflowname}
@@ -457,7 +474,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\ \@linkedin}
@@ -467,7 +484,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{https://twitter.com/\@twitter}{\faTwitter\ \@twitter}
@@ -477,7 +494,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \faSkype\ \@skype
@@ -501,7 +518,7 @@
   }
   \fancyfoot[R]{
     \footerstyle{#3}
-  } 
+  }
 }
 
 % Define a section for CV
@@ -521,23 +538,51 @@
   \subsectionstyle{#1}
 }
 
+% Define a paragraph for CV
+\newenvironment{cvparagraph}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-3mm}
+  \paragraphstyle
+}{%
+  \par
+%  \vspace{2mm}
+}
+
 % Define an environment for cventry
 \newenvironment{cventries}{
   \begin{center}
 }{
   \end{center}
+  \vspace{-0.5cm}  
 }
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{14cm} R{5cm}}
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{17cm}}{\descriptionstyle{#5}} \\
+    \multicolumn{2}{L{19cm}}{\descriptionstyle{#5}} 
+  \end{tabular*}
+}
+
+% Define an environment for cventry
+\newenvironment{cventriesy}{
+  \begin{center}
+}{
+  \end{center}
+  \vspace{-0.5cm}
+}
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cventryy}[1]{
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{3pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} p{19cm}}
+    \descriptionstyle{#1}  
   \end{tabular*}
 }
 
@@ -555,7 +600,7 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
     \setlength\leftskip{0.2cm}
     \subentrytitlestyle{#2} & \ifthenelse{\equal{#1}{}}
-      {\subentrydatestyle{#3}}{} 
+      {\subentrydatestyle{#3}}{}
     \ifthenelse{\equal{#1}{}}
       {}
       {\subentrypositionstyle{#1} & \subentrydatestyle{#3} \\}
@@ -569,8 +614,9 @@
 \newenvironment{cvhonors}{
   \begin{center}
     \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{13.0cm} R{2.5cm}}
+    \setlength{\extrarowheight}{-7pt}
+    %\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} p{1cm} p{18.0cm}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} p{1.cm} p{13.0cm} p{3.cm}}
 }{
     \end{tabular*}
   \end{center}
@@ -582,12 +628,60 @@
   \\
 }
 
+\newcommand*{\cvhonornb}[3]{
+	\honordatestyle{#3} & \honortitlestyle{#1} & \honorlocationstyle{#2}
+	\\
+}
+
+\newenvironment{cvpubs}{
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.cm} L{17.0cm}}
+}{
+    \end{tabular*}
+  \vspace{-0.2cm}
+  \end{center}
+}
+
+\newcommand*{\cvpub}[3]{
+  \honordatestyle{#3} & \honorpositionstyle{#1}, \honortitlestyle{#2}
+  \\
+}
+
+\newenvironment{cvpubys}{
+	\begin{center}
+		\setlength\tabcolsep{0pt}
+		\setlength{\extrarowheight}{-5pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} p{1cm} p{18.0cm}}
+    %\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.cm} L{17.0cm}}
+		}{
+	\end{tabular*}
+  \vspace{-0.6cm}
+\end{center}
+}
+
+\newcommand*{\cvpuby}[7]{
+	\begin{flushright}\honortitlestyle{#7}\ \ \ \ \end{flushright} & \honortitlestyle{#1} \honortitlestyle{#2} \emph{\honortitlestyle{#4}} \honortitlestyle{#5} \honortitlestyle{#3} \honortitlestyle{#6}
+    \\
+}
+
 % Define an environment for cvskill
 \newenvironment{cvskills}{
   \begin{center}
     \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{15.2cm}}
+    \setlength{\extrarowheight}{-5pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} p{1.2cm} p{16.8cm}}
+}{
+    \end{tabular*}
+  \end{center}
+}
+% Define an environment for cvskill
+\newenvironment{cvskillsy}{
+  \begin{center}
+    \setlength\tabcolsep{1ex}
+    \setlength{\extrarowheight}{-5pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} p{0.5cm} p{17.5cm}}
 }{
     \end{tabular*}
   \end{center}
@@ -595,7 +689,7 @@
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{
-	\skilltypestyle{#1} & \skillsetstyle{#2} 
+	\skilltypestyle{#1} & \skillsetstyle{#2}
   \\
 }
 
@@ -611,7 +705,18 @@
   \end{justify}
   \vspace{-2mm}
 }
-
+% Define an environment for cvitems(for cventry)
+\newenvironment{cvitemsy}{
+  \vspace{-4mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{
+  \end{itemize}
+  \end{justify}
+  \vspace{-2mm}
+}
 
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
@@ -624,13 +729,13 @@
 
 % Define a paragraph for cvletter
 % Usage: \cvparagraph{<paragraph-title>}
-\newcommand{\cvparagraph}[1]{
-  \par\addvspace{2.5ex}
-  \phantomsection{}
-  \paragraphstyle{#1}
-  \color{gray}\vhrulefill{0.9pt}
-  \par\nobreak\addvspace{0.4ex}
-}
+%\newcommand{\cvparagraph}[1]{
+%  \par\addvspace{2.5ex}
+%  \phantomsection{}
+%  \paragraphstyle{#1}
+%  \color{gray}\vhrulefill{0.9pt}
+%  \par\nobreak\addvspace{0.4ex}
+%}
 
 % Define a title of the cover letter
 % Usage: \makelettertitle
@@ -647,7 +752,7 @@
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
     {\lettertitlestyle{\@lettertitle} \\}
-  \lettertextstyle{\@letteropening} 
+  \lettertextstyle{\@letteropening}
 }
 
 % Define a closing of the cover letter

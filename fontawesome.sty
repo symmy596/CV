@@ -12,8 +12,14 @@
 \newfontfamily{\FA}[
 Path=fonts/
 ]{FontAwesome}
+\newfontfamily{\FAO}[
+Path=fonts/
+]{FontAwesomeOld}
 % Generic command displaying an icon by its name.
 \newcommand*{\faicon}[1]{{
+  \FA\csname faicon@#1\endcsname
+}}
+\newcommand*{\faicono}[1]{{
   \FA\csname faicon@#1\endcsname
 }}
 
@@ -290,9 +296,9 @@ Path=fonts/
 \expandafter\def\csname faicon@gift\endcsname {\symbol{"F06B}} \def\faGift {{\FA\csname faicon@gift\endcsname}}
 \expandafter\def\csname faicon@git\endcsname {\symbol{"F1D3}} \def\faGit {{\FA\csname faicon@git\endcsname}}
 \expandafter\def\csname faicon@git-square\endcsname {\symbol{"F1D2}} \def\faGitSquare {{\FA\csname faicon@git-square\endcsname}}
-\expandafter\def\csname faicon@github\endcsname {\symbol{"F09B}} \def\faGithub {{\FA\csname faicon@github\endcsname}}
-\expandafter\def\csname faicon@github-alt\endcsname {\symbol{"F113}} \def\faGithubAlt {{\FA\csname faicon@github-alt\endcsname}}
-\expandafter\def\csname faicon@github-square\endcsname {\symbol{"F092}} \def\faGithubSquare {{\FA\csname faicon@github-square\endcsname}}
+\expandafter\def\csname faicono@github\endcsname {\symbol{"F09B}} \def\faGithub {{\FAO\csname faicono@github\endcsname}}
+\expandafter\def\csname faicono@github-alt\endcsname {\symbol{"F113}} \def\faGithubAlt {{\FAO\csname faicono@github-alt\endcsname}}
+\expandafter\def\csname faicono@github-square\endcsname {\symbol{"F092}} \def\faGithubSquare {{\FAO\csname faicono@github-square\endcsname}}
 \expandafter\def\csname faicon@gittip\endcsname {\symbol{"F184}} \def\faGittip {{\FA\csname faicon@gittip\endcsname}}
 \expandafter\def\csname faicon@glass\endcsname {\symbol{"F000}} \def\faGlass {{\FA\csname faicon@glass\endcsname}}
 \expandafter\def\csname faicon@globe\endcsname {\symbol{"F0AC}} \def\faGlobe {{\FA\csname faicon@globe\endcsname}}
@@ -413,8 +419,8 @@ Path=fonts/
 \expandafter\def\csname faicon@minus-circle\endcsname {\symbol{"F056}} \def\faMinusCircle {{\FA\csname faicon@minus-circle\endcsname}}
 \expandafter\def\csname faicon@minus-square\endcsname {\symbol{"F146}} \def\faMinusSquare {{\FA\csname faicon@minus-square\endcsname}}
 \expandafter\def\csname faicon@minus-square-o\endcsname {\symbol{"F147}} \def\faMinusSquareO {{\FA\csname faicon@minus-square-o\endcsname}}
-\expandafter\def\csname faicon@mobile\endcsname {\symbol{"F10B}} \def\faMobile {{\FA\csname faicon@mobile\endcsname}}
-\expandafter\def\csname faicon@mobile-phone\endcsname {\symbol{"F10B}} \def\faMobilePhone {{\FA\csname faicon@mobile-phone\endcsname}}
+\expandafter\def\csname faicono@mobile\endcsname {\symbol{"F10B}} \def\faMobile {{\FAO\csname faicono@mobile\endcsname}}
+\expandafter\def\csname faicono@mobile-phone\endcsname {\symbol{"F10B}} \def\faMobilePhone {{\FAO\csname faicono@mobile-phone\endcsname}}
 \expandafter\def\csname faicon@money\endcsname {\symbol{"F0D6}} \def\faMoney {{\FA\csname faicon@money\endcsname}}
 \expandafter\def\csname faicon@moon-o\endcsname {\symbol{"F186}} \def\faMoonO {{\FA\csname faicon@moon-o\endcsname}}
 \expandafter\def\csname faicon@mortar-board\endcsname {\symbol{"F19D}} \def\faMortarBoard {{\FA\csname faicon@mortar-board\endcsname}}
@@ -632,6 +638,7 @@ Path=fonts/
 \expandafter\def\csname faicon@underline\endcsname {\symbol{"F0CD}} \def\faUnderline {{\FA\csname faicon@underline\endcsname}}
 \expandafter\def\csname faicon@undo\endcsname {\symbol{"F0E2}} \def\faUndo {{\FA\csname faicon@undo\endcsname}}
 \expandafter\def\csname faicon@university\endcsname {\symbol{"F19C}} \def\faUniversity {{\FA\csname faicon@university\endcsname}}
+\expandafter\def\csname faicon@atom\endcsname {\symbol{"F5D2}} \def\faAtom {{\FA\csname faicon@atom\endcsname}}
 \expandafter\def\csname faicon@unlink\endcsname {\symbol{"F127}} \def\faUnlink {{\FA\csname faicon@unlink\endcsname}}
 \expandafter\def\csname faicon@unlock\endcsname {\symbol{"F09C}} \def\faUnlock {{\FA\csname faicon@unlock\endcsname}}
 \expandafter\def\csname faicon@unlock-alt\endcsname {\symbol{"F13E}} \def\faUnlockAlt {{\FA\csname faicon@unlock-alt\endcsname}}
