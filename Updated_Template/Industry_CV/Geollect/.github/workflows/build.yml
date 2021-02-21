@@ -1,0 +1,23 @@
+name: build
+on: push
+
+jobs: 
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Xelatex
+        run: sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex lmodern texlive-science-doc texlive-science
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Run latex
+        run: xelatex -interaction=nonstopmode -halt-on-error resume.tex
+      - name: Commit
+        uses: EndBug/add-and-commit@v4
+        with:
+          add: resume.pdf
+          author_name: Github Actions
+          author_email: andrew.mccluskey@diamond.ac.uk
+          message: "CV Built"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
