@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2021.2.21)  21 FEB 2021 19:58
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2021.2.21)  22 MAY 2022 10:57
 entering extended mode
 **./resume.tex
 (resume.tex
@@ -552,26 +552,34 @@ guage=dflt;mapping=tex-text;!
  (resume/summary.tex)
 (resume/researchexperience.tex
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 14.
+(Font)              scaled to size 10.95116pt on input line 22.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 14.
+(Font)              scaled to size 7.6658pt on input line 22.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 14.
+(Font)              scaled to size 5.47559pt on input line 22.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 14.
+(Font)              scaled to size 10.94882pt on input line 22.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 14.
+(Font)              scaled to size 7.66417pt on input line 22.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 14.
+(Font)              scaled to size 5.47441pt on input line 22.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <9> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 14.
+t line 22.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <8> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 14.
-) (resume/skills.tex
+t line 22.
+)
+
+Package fancyhdr Warning: \footskip is too small (1.42271pt): 
+(fancyhdr)                Make it at least 4.08003pt, for example:
+(fancyhdr)                \setlength{\footskip}{4.08003pt}.
+
+[1
+
+] (resume/skills.tex
 Overfull \hbox (13.08678pt too wide) in paragraph at lines 4--4
 []|\TU/SourceSansPro(1)/b/n/10 Languages[]| 
  []
@@ -582,24 +590,36 @@ Overfull \hbox (5.78679pt too wide) in paragraph at lines 5--5
  []
 
 
-Overfull \hbox (22.61363pt too wide) in paragraph at lines 10--10
+Overfull \hbox (6.09679pt too wide) in paragraph at lines 7--7
+[]|\TU/SourceSansPro(1)/b/n/10 Research[]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]|
+ []
+
+
+Overfull \hbox (20.76364pt too wide) in paragraph at lines 11--11
+\TU/SourceSansPro(1)/b/n/10 python-
+ []
+
+
+Overfull \hbox (9.72363pt too wide) in paragraph at lines 11--11
+\TU/SourceSansPro(1)/b/n/10 maps[]| 
+ []
+
+
+Overfull \hbox (22.61363pt too wide) in paragraph at lines 12--12
 []|\TU/SourceSansPro(1)/b/n/10 surfinpy[]| 
  []
 
 
-Overfull \hbox (15.98364pt too wide) in paragraph at lines 11--11
+Overfull \hbox (15.98364pt too wide) in paragraph at lines 13--13
 []|\TU/SourceSansPro(1)/b/n/10 polypy[]| 
  []
 
-)
-
-Package fancyhdr Warning: \footskip is too small (1.42271pt): 
-(fancyhdr)                Make it at least 4.08003pt, for example:
-(fancyhdr)                \setlength{\footskip}{4.08003pt}.
-
-[1
-
-] (resume/education.tex) (resume/interests.tex)
+) (resume/spublications.tex) (resume/education.tex) (resume/interests.tex)
 
 Package fancyhdr Warning: \footskip is too small (1.42271pt): 
 (fancyhdr)                Make it at least 4.08003pt, for example:
@@ -610,12 +630,12 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18389 strings out of 412236
- 314988 string characters out of 2855192
- 819146 words of memory out of 3000000
- 37624 multiletter control sequences out of 15000+200000
- 537708 words of font info for 96 fonts, out of 3000000 for 9000
+ 18402 strings out of 412236
+ 315458 string characters out of 2855192
+ 824146 words of memory out of 3000000
+ 37629 multiletter control sequences out of 15000+200000
+ 537740 words of font info for 100 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 95i,11n,112p,527b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 95i,11n,112p,806b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on resume.pdf (2 pages).
