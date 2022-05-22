@@ -1,1 +1,1 @@
-my CV along with tex input
+<embed src="/resume.pdf" type="application/pdf">
